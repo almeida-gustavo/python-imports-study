@@ -1,9 +1,0 @@
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
-
-[project.scripts]
-hello-world = "timmins:hello_world"
-
-[project.entry-points."timmins.display"]
-excl = "timmins_plugin_fancy:excl_display"

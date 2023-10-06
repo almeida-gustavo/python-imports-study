@@ -12,7 +12,10 @@ def main() -> int:
     parser.add_argument('--outputer', default='default')
     args = parser.parse_args()
 
-    eps = importlib.metadata.entry_points()['this_name_can_be_what_i_want']
+    eps = importlib.metadata.entry_points(group="this_name_can_be_what_i_want")
+    # both produces the same result
+    # eps = importlib.metadata.entry_points()["this_name_can_be_what_i_want"]
+    print(eps)
     outputers = {
         entrypoint.name: entrypoint
         for entrypoint in eps
@@ -31,5 +34,5 @@ def main() -> int:
     return 0
 
 
-if __name__ == '__main__':
-    exit(main())
+# if __name__ == '__main__':
+#     exit(main())
