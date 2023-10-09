@@ -1,0 +1,1 @@
+This implements the code described https://johndanielraines.medium.com/level-up-in-python-with-dependency-inversion-and-entry-points-c648a1b087ee.
